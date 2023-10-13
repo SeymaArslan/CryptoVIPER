@@ -6,3 +6,17 @@
 //
 
 import Foundation
+
+protocol AnyRouter {
+    static func startExecution() -> AnyRouter // static deme sebebimiz diğer sınıflardan da bu metoda erişebilme isteğimiz
+}
+
+class CryptoRouter: AnyRouter {
+    static func startExecution() -> AnyRouter {
+        let router = CryptoRouter()
+        return router
+    }
+    
+    
+    
+}
